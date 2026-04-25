@@ -1,0 +1,62 @@
+/* ----------------------------------------------------
+   Global typography & colours – adjust to suit branding
+   ---------------------------------------------------- */
+:root {
+  --font-primary: 'Montserrat', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+  --primary: #0d6efd;  /* Bootstrap primary */
+  --secondary: #6c757d;
+}
+
+/* Apply fonts */
+body { font-family: var(--font-secondary); }
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-primary); }
+
+/* Hero overlay (dark text over image) */
+.hero {
+  position: relative;
+  color: #fff;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Card hover – subtle elevation */
+.card:hover {
+  transform: translateY(-4px);
+  transition: transform .2s ease;
+}
+
+/* CTA section – big button */
+.cta {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Footer – smaller links */
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Form validation – use Bootstrap default, but custom colour for success */
+#form-status .alert-success {
+  background-color: #d1e7dd;
+  border-color: #badbcc;
+  color: #0f5132;
+}
+
+/* Responsive image tweaks */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Utility margin/padding tweaks (optional) */
+.mt-6 { margin-top: 4rem !important; }
